@@ -1,0 +1,24 @@
+Instlling superNova:
+
+The superNova package should be added to the MestReNova directory designated to hold your personal scripts 
+C:\Users\username\AppData\Roaming\Mestrelab Research S.L\MestReNova\scripts  
+Where rpotter1 in the path above would be replaced with your JnJ username.  After installing the MestReNova package this file will be empty.  
+One needs to obtain the latest version of the pnmr package (pnmr2.0 at the time of creation of this manual) from the administrator as a .zip file.  
+The file is then extracted to the path shown above.  One can use different subdirectories to archive different versions of the software if desired.
+Befor using the package the three example jobscripts need to chage the scratch directory to one on your computer.  The three example scripts are
+named example1.qs, example2.qs and example3.qs. example1.qs and example2.qs have two lines that need to be changed.  These two lines specify where
+the temporary integral and composition files will be stored.  For example1 these are lines 10 and 11:
+
+    
+    ex1obj.intfilename = "C:\\Users\\username\\Documents\\NMR\\text\\example1_int.dat";
+    ex1obj.compfilename = "C:\\Users\\username\\Documents\\NMR\\text\\example1_comp.dat";
+
+Leave the filenames the same and change the path to point to a new scratch folder that you make on you machine -- NOT THE INSTALL DIRECTORY SHOWN 
+AT THE TOP OF THIS DOCUMENT. example3.qs has the same two statements plus a a line within the inset object declaration (line 23) that reads:
+
+    coordsFile : "C:\\Users\\rpotter1\\OneDrive - JNJ\\Documents\\NMR\\text\\example2_coords.dat"  
+
+again, leave the filename the same and point the path toward the scratch directory you made earlier. Two shell scripts are provided to automate 
+these edits: setup and setup.ps1 for Linux/Mac and Windows, respectively.  
+
+   
